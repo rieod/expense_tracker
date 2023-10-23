@@ -1,5 +1,6 @@
 import 'package:expense_tracker/widgets/expenses.dart';
 import 'package:flutter/material.dart';
+// import 'package:flutter/services.dart';
 
 var kColorScheme =
     ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 216, 144, 255));
@@ -10,6 +11,10 @@ var kDarkColorScheme = ColorScheme.fromSeed(
 );
 
 void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.portraitUp,
+  // ]).then((fn) => {
   runApp(
     MaterialApp(
       darkTheme: ThemeData.dark().copyWith(
@@ -60,4 +65,5 @@ void main() {
       home: const Expenses(),
     ),
   );
+  // });
 }
